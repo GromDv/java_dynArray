@@ -187,18 +187,6 @@ public class dynArrayList<T> {
     }
 
     public boolean findData(T el) throws NonComparableTypeException {
-        // if (el instanceof Integer) {
-        // for (T t : data) {
-        // if (t == el) {
-        // return true;
-        // }
-        // }
-        // } else if (el instanceof Double) {
-        // for (T t : data) {
-        // if (compareD((Double) t, (Double) el) == 0)
-        // return true;
-        // }
-        // }
         if (el instanceof Comparable) {
             Comparable<T> elem = (Comparable<T>) el;
             for (T t : data) {
