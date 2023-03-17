@@ -37,9 +37,10 @@ public class dynArrayList<T> {
     public void add(T element) {
         int newlen = length + 1;
         T[] newData = (T[]) new Object[newlen];
-        for (int i = 0; i < length; i++) {
-            newData[i] = data[i];
-        }
+        //for (int i = 0; i < length; i++) {
+        //    newData[i] = data[i];
+        //}
+        System.arraycopy(data, 0, newData, 0, length);
         data = newData;
         data[length++] = element;
     }
